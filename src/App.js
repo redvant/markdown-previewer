@@ -2,7 +2,7 @@ import React from 'react';
 import Editor from './components/editor/editor.component';
 import Preview from './components/preview/preview.component';
 import { marked } from 'marked';
-import { DOMPurify } from 'dompurify';
+import { sanitize } from 'dompurify';
 import './App.css';
 
 const DEFAULT_TEXT = `# Heading
@@ -41,7 +41,8 @@ And finally here is some bold text: **BOLD**
 `;
 
 marked.setOptions({
-  breaks: true
+  breaks: true,
+  sanitizer: sanitize
 });
 
 const renderer = {
@@ -64,7 +65,7 @@ class App extends React.Component {
 
   handleChange(event) {
     this.setState({
-      markdown: DOMPurify.sanitize(event.target.value)
+      markdown: event.target.value
     });
   }
 
