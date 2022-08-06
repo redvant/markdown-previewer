@@ -1,0 +1,17 @@
+.editor-box {
+  flex: 1;
+}
+.editor-box textarea {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-color: Transparent;
+  resize: none;
+  color: #dcddde;
+}
+.editor-box textarea:focus {
+  outline: 0;
+}
