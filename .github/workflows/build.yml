@@ -46,4 +46,4 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.ouutputs.tags }}
-          labels: ${{ setps.meta.outputs.labels }}
+          labels: ${{ steps.meta.outputs.labels }}
