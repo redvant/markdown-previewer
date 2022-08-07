@@ -16,10 +16,8 @@ jobs:
       packages: write
 
     steps:
-      - name: Chackout repository
+      - name: Checkout repository and run app tests
       - uses: actions/checkout@v3
-
-      - name: Run app tests
       - run: docker build -t redvant/react-test -f Dockerfile.dev .
       - run: docker run -e CI=true redvant/react-test npm test
 
