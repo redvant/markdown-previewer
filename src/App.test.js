@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('preview displays links', () => {
+test('title display', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Link to Github/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/Markdown Previewer/i);
+  expect(titleElement).toBeInTheDocument();
 });
