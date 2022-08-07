@@ -9,7 +9,7 @@ const DEFAULT_TEXT = `# Heading
 
 ## Subheading
 
-This is a link: [link](https://www.github.com).
+This is a link: [Link to Github](https://www.github.com).
 
 This is an inline code: \`const num = 5;\`.
 
