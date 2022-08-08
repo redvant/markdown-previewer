@@ -6,9 +6,7 @@ import { sanitize } from 'dompurify';
 import './App.css';
 
 const DEFAULT_TEXT = `# Welcome! 
-This is a Markdown previewer, which means that 
-if you write some markdown in the **Editor** it
-will get displayed in the **Preview** as html.
+This is a markdown previewer, which means that if you write some markdown in the **Editor** it will get displayed in the **Preview** as html.
 
 The next text are some basic examples of markdown syntax:
 ***
@@ -46,7 +44,9 @@ This is an image:
 
 And finally here is some bold text: **BOLD**
 ***
+You can check a more complete guide on markdown syntax [here](https://www.markdownguide.org/basic-syntax/).
 
+**Now delete the default text and start writing some markdown!**
 `;
 
 marked.setOptions({
