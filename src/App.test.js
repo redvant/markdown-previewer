@@ -3,6 +3,6 @@ import App from './App';
 
 test('title display', () => {
   render(<App />);
-  const titleElement = screen.getByText(/Markdown Previewer/i);
+  const titleElement = screen.getByText(/Markdown Previewer/);
   expect(titleElement).toBeInTheDocument();
 });
