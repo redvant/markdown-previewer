@@ -5,7 +5,14 @@ import { marked } from 'marked';
 import { sanitize } from 'dompurify';
 import './App.css';
 
-const DEFAULT_TEXT = `# Heading
+const DEFAULT_TEXT = `# Welcome! 
+This is a Markdown previewer, which means that 
+if you write some markdown in the **Editor** it
+will get displayed in the **Preview** as html.
+
+The next text are some basic examples of markdown syntax:
+***
+# Heading
 
 ## Subheading
 
@@ -38,6 +45,8 @@ This is an image:
 ![Image](https://i.imgur.com/IVGeGuJ.jpeg)
 
 And finally here is some bold text: **BOLD**
+***
+
 `;
 
 marked.setOptions({
