@@ -4,8 +4,9 @@ import Preview from './components/preview/preview.component';
 import { marked } from 'marked';
 import { sanitize } from 'dompurify';
 import './App.css';
+import newFile from './assets/new_file_w.png'
 
-const DEFAULT_TEXT = `# Welcome! 
+const DEFAULT_TEXT = localStorage.getItem('edit-text') || `# Welcome! 
 This is a markdown previewer, which means that if you write some markdown in the **Editor** it will get displayed in the **Preview** as html.
 
 The next text are some basic examples of markdown syntax:
@@ -70,23 +71,33 @@ class App extends React.Component {
       markdown: DEFAULT_TEXT
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleChange(event) {
     this.setState({
       markdown: event.target.value
     });
+    localStorage.setItem('edit-text', event.target.value)
+  }
+
+  handleClear() {
+    this.setState({
+      markdown: ''
+    });
+    localStorage.clear();
   }
 
   render() {
     const { markdown } = this.state;
-    const { handleChange } = this;
+    const { handleChange, handleClear } = this;
     return (
       <div className="wrapper">
         <header>
           <h1>Markdown Previewer</h1>
-          <hr />
+          <button onClick={handleClear}><img src={newFile} alt="new file"></img></button>
         </header>
+          <hr />
         <main className="content">
           <Editor input={markdown} onChange={handleChange} />
           <Preview markdown={markdown} />

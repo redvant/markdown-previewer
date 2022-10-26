@@ -2,9 +2,6 @@ import React from 'react';
 import './editor.css'
 
 class Editor extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { input, onChange } = this.props;

@@ -3,9 +3,6 @@ import { marked } from 'marked';
 import './preview.css';
 
 class Preview extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   createMarkup(markdown) {
     return {
