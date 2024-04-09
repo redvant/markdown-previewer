@@ -5,7 +5,7 @@ import { marked } from 'marked';
 import { sanitize } from 'dompurify';
 import './App.css';
 
-const DEFAULT_TEXT = `# Welcome! 
+const DEFAULT_TEXT = `# Welcome all! 
 This is a markdown previewer, which means that if you write some markdown in the **Editor** it will get displayed in the **Preview** as html.
 
 The next text are some basic examples of markdown syntax:
